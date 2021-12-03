@@ -1,5 +1,10 @@
+//MainHeader.js located in src folder ./MainHeader
+//export function MainHeader is used in App.js
+
+// nav link needed to use active navigation links
 import { NavLink } from 'react-router-dom';
 
+//main header used to display the nav bar across all pages
 import classes from './MainHeader.module.css';
 
 const MainHeader = () => {

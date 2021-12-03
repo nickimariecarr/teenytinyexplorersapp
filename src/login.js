@@ -1,19 +1,21 @@
+// login.js in src folder ./login
+//contains login form for users that are already registered with an account 
+
+
 import React from 'react';
+
+//design elements
 import Image from "react-bootstrap/Image";
-import Explorers from './Explorers.PNG';
 import {Container, Row, Col, Button} from 'react-bootstrap'
-import ExplorerHome from './ExplorerHome.png';
+
+//images
 import playing from './playing.png';
 
-console.log(Explorers);
-console.log(ExplorerHome);
 
 function Login() {
     
     return(
-      <div>
-
-              
+      <div>    
       {/* Image of child playing on left hand side */} 
       <div>
         <Container fluid>
@@ -26,6 +28,8 @@ function Login() {
                 </Col>
                 <Col>
             
+
+            {/* Login form */} 
             <form>
                 <h3>Sign In</h3>
                 <div className="form-group">
