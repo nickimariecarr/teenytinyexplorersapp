@@ -1,10 +1,10 @@
 import React from 'react';
 import Image from "react-bootstrap/Image";
-import {Container, Row, Col, Button} from 'react-bootstrap';
-import { Link } from "react-router-dom"; 
 import Explorers from './Explorers.PNG';
+import {Container, Row, Col, Button} from 'react-bootstrap'
 import ExplorerHome from './ExplorerHome.png';
-import tree from './tree.png';
+import { Link } from "react-router-dom"; 
+
 
 console.log(Explorers);
 console.log(ExplorerHome);
@@ -23,7 +23,7 @@ function Home() {
             <Row className="light-row" style={{ alignItems:'center', padding: "5px"}}>
               <Col>
                 <div style={{ display: "flex" , alignItems:'center'}}>
-                  <Image src='./ExplorerHome.png' fluid/>
+                  <Image src="./ExplorerHome.png" fluid/>
                 </div>
             
               </Col>
