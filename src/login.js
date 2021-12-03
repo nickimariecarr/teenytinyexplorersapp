@@ -3,7 +3,7 @@ import Image from "react-bootstrap/Image";
 import Explorers from './Explorers.PNG';
 import {Container, Row, Col, Button} from 'react-bootstrap'
 import ExplorerHome from './ExplorerHome.png';
-
+import playing from './playing.png';
 
 console.log(Explorers);
 console.log(ExplorerHome);
@@ -14,14 +14,14 @@ function Login() {
       <div>
 
               
-      {/* Intro section of page */} 
+      {/* Image of child playing on left hand side */} 
       <div>
         <Container fluid>
             <Row style={{ height: "50px" }}></Row>
             <Row className="light-row" style={{ alignItems:'center', padding: "5px"}}>
                 <Col>
                     <div style={{ display: "flex" , alignItems:'center'}}>
-                        <Image src="./playing.png" fluid/>
+                        <Image src={playing} fluid/>
                     </div>
                 </Col>
                 <Col>

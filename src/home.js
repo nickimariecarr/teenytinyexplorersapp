@@ -1,21 +1,19 @@
 import React from 'react';
+
+//design elements
 import Image from "react-bootstrap/Image";
-import Explorers from './Explorers.PNG';
 import {Container, Row, Col, Button} from 'react-bootstrap'
-import ExplorerHome from './ExplorerHome.png';
 import { Link } from "react-router-dom"; 
 
+//images
+import ExplorerHome from './ExplorerHome.png';
+import tree from './tree.png';
 
-console.log(Explorers);
-console.log(ExplorerHome);
 
 function Home() {
     return(
       <div>
-      
-
-
-              
+         
       {/* Intro section of page */} 
       <div>
         <Container fluid>
@@ -23,7 +21,7 @@ function Home() {
             <Row className="light-row" style={{ alignItems:'center', padding: "5px"}}>
               <Col>
                 <div style={{ display: "flex" , alignItems:'center'}}>
-                  <Image src="./ExplorerHome.png" fluid/>
+                  <Image src={ExplorerHome}fluid/>
                 </div>
             
               </Col>
@@ -46,7 +44,6 @@ function Home() {
                   </center>
               </Col>
                   <Row style={{ height: "20px" }}></Row>
-
             </Row>
     </Container>
     </div>
@@ -94,14 +91,12 @@ function Home() {
                     </div>
                 </Col>
                 <Col>
-                  <Image src="./tree.png" fluid/>
+                  <Image src={tree} fluid/>
                 </Col>
               </Row>
               <Row style={{ height: "50px" }}></Row>
         </Container> 
-        
         </div>
-
   );
 }
 export default Home;
