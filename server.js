@@ -46,6 +46,18 @@ app.get("/grouptotal",(req, res) => {
  });
 });
 
+
+//get total of groups in system and display as totalgroups: #
+app.get("/grouptotal",(req, res) => {
+  db.query("SELECT COUNT(*) AS totalgroups FROM teenytinyexplorer.groups;" , (err, result) => {
+   if (err) {
+      console.log(err);
+   } else {
+    res.send(result);
+    }
+ });
+});
+
 //post groups
 app.post("/group", (req, res) => {
   const insertQuery = "INSERT INTO teenytinyexplorer.groups SET ?;"

@@ -14,7 +14,7 @@ export default function Delete(props) {
     // 4.
 return (
     <button className="del-btn" onClick={deleteGroup}>
-      Delete Review
+      Delete
     </button>
   );
 }

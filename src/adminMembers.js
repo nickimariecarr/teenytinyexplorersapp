@@ -35,19 +35,19 @@ function AdminMember() {
         </div>
         <div>
         <center> <CreateMember member={member} setMember={setMember} /> </center>
-           
-          <table className="search-table" style={{alignItems:"center", border:"3px"}}>
+          <center>
+          <table className="search-table" style={{alignItems:"center", border:"3px", width:"100%"}}>
             <thead>
               <tr>
                 <th>First Name </th>
                 <th> Last Name </th>
-                <th> Email </th>
-                <th> Address </th>
-                <th> City</th>
-                <th> Zip</th>
-                <th> State</th>
                 <th> Username</th>
-                <th> Password</th>
+                <th> Password </th>
+                <th> Email</th>
+                <th> Address</th>
+                <th> City</th>
+                <th> State</th>
+                <th> Zip </th>
                 <th> Delete Member </th>
 
               </tr>
@@ -78,7 +78,7 @@ function AdminMember() {
             
         </table>
         
-
+      </center>
         </div>
     </div>
     );

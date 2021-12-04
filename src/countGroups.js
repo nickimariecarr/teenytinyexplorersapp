@@ -23,7 +23,7 @@ export default function CountGroups(props) {
         {groups.map((item) => {
           return (
             <div className="groups">
-              <h3>Total Groups: {item.totalgroups}</h3>
+              <h4>Total Groups: {item.totalgroups}</h4>
             </div>
           );
         })}

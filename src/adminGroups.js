@@ -9,7 +9,7 @@ import axios from "axios";
 import SearchGroups from "./tableSearch";
 import Delete from "./deleteGroup.js";
 import SearchBar from './searchBar';
-import CountGroups from './countGroups';
+import CreateGroups from './createGroups';
 
 function AdminGroups() {
   const [groups, setGroups] = useState([]);
@@ -45,9 +45,13 @@ function AdminGroups() {
             onChange={updateInput}/>
             </center>
         </div>
+
+        
         <div>
+        <center> <CreateGroups groups={groups} setGroups={setGroups} /> </center>
+
         <center>
-          <table className="search-table" style={{alignItems:"center", width:"100", border:"3px"}}>
+          <table className="search-table" style={{alignItems:"center", width:"100%", border:"3px"}}>
             
             <thead>
               <tr>

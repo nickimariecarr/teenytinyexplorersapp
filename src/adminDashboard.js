@@ -4,7 +4,7 @@ import {Container, Row, Col, Button} from 'react-bootstrap'
 import ExplorerHome from './ExplorerHome.png';
 import { useNavigate } from 'react-router';
 import CountGroups from './countGroups';
-import { useState, useEffect } from "react";
+import { useState} from "react";
 
 
 
@@ -31,19 +31,24 @@ function Admindashboard() {
       <div>
         <Container className="light-row" >
             <Row style={{ height: "50px" }}></Row>
-            <Row className="light-row" style={{ alignItems:'center', padding: "5px"}}>
+            <Row className="light-row" style={{ alignItems:'center', paddingTop: "5px"}}>
               <Col>
                 <center><h3>
                   Groups                
-                </h3></center>
-                <container className="row" style={{background:"green"}}><CountGroups groups={groups} setGroups={setGroups}  /> </container>
-                  <p>
-                    Getting out into nature can happen at anytime, but having a group to get out and explore together can be so much fun. 
-                    Teeny Tiny Explorers is focused on creating communities to come together and explorer the outdoors with one another. 
-                    There are so many local groups you can find to meet up, but having a group dedicated to nature play is hard to find. 
-                    Teeny Tiny Explorers wanted to bridge that gap between parents looking to meet other parents but also find others that 
-                    love exploring outside with their little ones.
-                  </p>
+                </h3>
+                </center>
+                  <center>
+                    <container className="row" style={{background:"white", width:"20%", marginTop:"10px", marginBottom: "10px", padding:"20px"}}>
+                    <CountGroups groups={groups} setGroups={setGroups} /> 
+                    </container>
+                  </center>
+                    <p>
+                      Getting out into nature can happen at anytime, but having a group to get out and explore together can be so much fun. 
+                      Teeny Tiny Explorers is focused on creating communities to come together and explorer the outdoors with one another. 
+                      There are so many local groups you can find to meet up, but having a group dedicated to nature play is hard to find. 
+                      Teeny Tiny Explorers wanted to bridge that gap between parents looking to meet other parents but also find others that 
+                      love exploring outside with their little ones.
+                    </p>
               </Col>
             </Row>
             <center><Button variant="light" onClick={handleClick2} >See Groups</Button></center>
