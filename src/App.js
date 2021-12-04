@@ -1,32 +1,42 @@
 import React from 'react';
+
+//router for navigation
 import { Route, Routes } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import MainHeader from './MainHeader';
-import outside from './outside.mp4';
-import { useState, useEffect } from "react";
-import axios from "axios";
 
+
+//design elements
 import './App.css';
+import {Container} from 'react-bootstrap';
+import MainHeader from './MainHeader';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-//pages
+
+
+//images
+import outside from './outside.mp4';
+
+// PAGES: application main pages
 import Home from './home';
 import About from './about';
+
+  //contact pages with form submission
 import BecomeaHost from './BecomeaHost';
+import Thankyoutwo from './Thankyoutwo';
 import Contact from './contact';
-import Login from './login';
+  //non admin pages with tables with display data
+import FindaGroup from './FindaGroup';
 import FindMembers from './memberTable';
+
+  // admin pages
 import Admindashboard from './adminDashboard';
 import AdminGroups from './adminGroups';
 import AdminMember from './adminMembers';
 
-
-
-//elements
-import {Container, Row, Col, Button} from 'react-bootstrap';
-
-//assets
-import FindaGroup from './FindaGroup';
+  //login and signup pages 
 import SignUp from './SignUp';
+import Login from './login';
+
+
 
 function App() {
   return (
@@ -52,6 +62,8 @@ function App() {
                 <Route path='/adminDashboard' element={<Admindashboard />} />
                 <Route path='/adminGroups' element={<AdminGroups />} />
                 <Route path='/adminMembers' element={<AdminMember />} />
+                <Route path='/Thankyoutwo' element={<Thankyoutwo />} />
+
 
 
               </Routes>

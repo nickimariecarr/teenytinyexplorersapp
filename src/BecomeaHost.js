@@ -1,29 +1,44 @@
 import emailjs from 'emailjs-com'
-import { Link } from "react-router-dom"; 
-import App from "./App";
+import {Button} from 'react-bootstrap'
+import { useNavigate } from "react-router-dom";
 
 
 const BecomeaHost = () => {
-    function sendEmail(e){
-        e.preventDefault();
+    
+    
+    function sendEmail(event){
+        event.preventDefault();
 
         emailjs.sendForm(
         "teenytinyexplorers",
         "template_kxw5tph", 
-        e.target, 
+        event.target, 
         "user_a5jwzuX6kSAOK7KdHVqVM"
-    ).then(res=>{
+    ).then(res=>{ 
+        navigate("/home");
         console.log(res);
     }).catch(err=>console.log(err));
 
-    }
+    } 
+
+    let navigate = useNavigate()
+
+    async function handleSubmit(e) {
+        e.preventDefault();
+        sendEmail(e.target);
+        navigate("./home", { replace: true });
+    };
+    
+  
+  
     return (
         <div>
 
         
         <div className="container border" style={{marginTop:"50px",width:"80%", background:"#6D7A69"}}>
             <center><h1 style={{marginTop: "25px"}} > Contact Form </h1></center>
-            <form className="row" style={{margin: "25px 85px 75px 100px"}} onSubmit={sendEmail}>
+
+            <form onClick={e => { this.sendEmail(e); this.handleSubmit() }} className="row" style={{margin: "25px 85px 75px 100px"}}  >
                     <label>First Name</label>
                     <input type="text" name="firstname"  className="form-control" />
 
@@ -114,9 +129,10 @@ const BecomeaHost = () => {
                   <input type="text" name="preferred" as="textarea" placeholder="Leave a comment here"
                     style={{ height: '100px', width: "100%" }} className="form-control"/>
                 </label>
-                 <Link to="/Thankyoutwo">
-                <input type="submit" value="Submit" className="form-control btn btn-primary" style={{marginTop: "30px",background:"white", color:"black"}} />
-                </Link>
+
+
+                <Button type="Submit" style={{marginTop: "30px",background:"white", color:"black"}}>Submit</Button>
+            
             </form>
         </div>
     </div>

@@ -1,14 +1,11 @@
 import React from 'react';
-import Explorers from './Explorers.PNG';
-import {Container, Row} from 'react-bootstrap'
-import ExplorerHome from './src/ExplorerHome.png';
+import {Container, Row} from 'react-bootstrap';
 
-console.log(Explorers);
-console.log(ExplorerHome);
+
 
 function Thankyoutwo() {
     return(
-      <div>
+      <div> 
         
         <Container>
             <Row style={{ height: "100px" }}></Row>

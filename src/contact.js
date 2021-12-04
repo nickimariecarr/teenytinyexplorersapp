@@ -1,14 +1,14 @@
-import emailjs from 'emailjs-com'
+import emailjs from 'emailjs-com';
 import { Link } from "react-router-dom"; 
 
-
+//npm install emailjs-com --save
 const Contact = () => {
     function sendEmail(e){
         e.preventDefault();
 
         emailjs.sendForm(
         "teenytinyexplorers",
-        "template_3u24m3f", 
+        "testcontact", 
         e.target, 
         "user_a5jwzuX6kSAOK7KdHVqVM"
     ).then(res=>{
@@ -37,10 +37,7 @@ const Contact = () => {
 
                 <label> Message </label>
                 <textarea name="message" rows="4" className="form-control"/>
-                <Link to="/Thankyouone">
-
-                <input type="submit" value="Send" className="form-control btn btn-primary" style={{marginTop: "30px",background:"white", color:"black"}} />
-                </Link>
+                <input type="submit" value="Send" className="form-control" style={{marginTop: "30px",background:"white", color:"black"}} />
             </form>
         </div>
     );
