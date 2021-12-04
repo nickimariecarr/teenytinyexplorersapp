@@ -5,90 +5,132 @@ import ExplorerHome from './ExplorerHome.png';
 import { useNavigate } from 'react-router';
 import CountGroups from './countGroups';
 import { useState} from "react";
-
-
+import CountMembers from './countMembers';
+import CountGroupsWeek from './countGroupWeek';
+import CountMemberWeek from './countmembersWeek';
+import CountGroupsMonth from './countgroupMonth';
+import CountMemberMonth from './countmembersMonth';
 
 console.log(Explorers);
 console.log(ExplorerHome);
 
 function Admindashboard() {
   const [groups, setGroups] = useState([]);
+  const [members, setMembers] = useState([]);
+  const [group, setGroup] = useState([]);
 
   let navigate = useNavigate();
 
   function handleClick() {
       navigate('/adminMembers')
     }
-
     function handleClick2() {
       navigate('/adminGroups')
     }
 
   
-    return(
-      <div>   
-      <Row style={{ height: "30px" }}></Row>
-      <div>
+  return(
+    <div>   
+      <Row style={{ height:"30px"}}></Row>
+      <div style={{width:"100%"}}>
         <Container className="light-row" >
-            <Row style={{ height: "50px" }}></Row>
-            <Row className="light-row" style={{ alignItems:'center', paddingTop: "5px"}}>
+            <Row style={{ height: "10px" }}></Row>
+            <Row className="light-row" style={{ alignItems:'center', paddingTop: "2px"}}>
               <Col>
-                <center><h3>
-                  Groups                
-                </h3>
+                <center>
+                <div style={{padding:"10px"}}>
+                  <h1>
+                    Groups                
+                  </h1>
+                </div>
                 </center>
+
                   <center>
-                    <container className="row" style={{background:"white", width:"20%", marginTop:"10px", marginBottom: "10px", padding:"20px"}}>
-                    <CountGroups groups={groups} setGroups={setGroups} /> 
+                    <container>
+                      <h4>Total Groups :</h4>
                     </container>
+                    <container className="row" style={{background:"white", width:"20%", marginTop:"10px", marginBottom: "10px", padding:"10px"}}>
+                      <CountGroups groups={groups} setGroups={setGroups} /> 
+                    </container>
+
+
+                  <h4>New groups in the last 7 days :</h4>
+                  <container className="row" style={{background:"white", width:"20%", marginTop:"10px", marginBottom: "10px", padding:"10px"}}>
+                    <CountGroupsWeek groups={groups} setGroups={setGroups} /> 
+                  </container>
+                  
+
+
+                  <h4>New groups in the last 7 days :</h4>
+                  <container className="row" style={{background:"white", width:"20%", marginTop:"10px", marginBottom: "10px", padding:"10px"}}>
+                    <CountGroupsMonth groups={groups} setGroups={setGroups} /> 
+                  </container>
                   </center>
-                    <p>
-                      Getting out into nature can happen at anytime, but having a group to get out and explore together can be so much fun. 
-                      Teeny Tiny Explorers is focused on creating communities to come together and explorer the outdoors with one another. 
-                      There are so many local groups you can find to meet up, but having a group dedicated to nature play is hard to find. 
-                      Teeny Tiny Explorers wanted to bridge that gap between parents looking to meet other parents but also find others that 
-                      love exploring outside with their little ones.
-                    </p>
+
+                    <center><p>
+                    Here you can view the number of total groups, number of new groups in the last 7 days from the current date, and the number of new groups within the past 30 days. To make changes to any of the information, please click the button below to visit the groups admin dashboard. 
+                    </p></center>
+
+
               </Col>
             </Row>
-            <center><Button variant="light" onClick={handleClick2} >See Groups</Button></center>
-          <Row style={{ height: "20px" }}></Row>
-    </Container>
-    </div>
 
-    <div >
-    
-    <Container className="color-nav" >
-    {/* find a group / become a host section */} 
+          <center>
+          <div style={{margin:"20px"}}>
+          <Button variant="light" onClick={handleClick2} >See Groups</Button>
+          </div>
+          </center>
+          <Row style={{ height: "20px" }}></Row>
+      </Container>
+      </div>
+
+      <div >
+      <Container className="color-nav" >
+      {/* find a group / become a host section */} 
               <Row style={{ alignItems:'center'}}>
-              <Col>
-                <Row style={{ height: "50px" }}></Row>
-                <h3>
-                    Events
-                  </h3>
-                    <p>
-                      Check the "Find a Local Group" section to find a group in your county.
-                      If you do not see one listed, and wish to host a local group, please see the "Host a Local Group" section.
-                    </p>
-                  <center><Button variant="light">See Events</Button></center>
-                </Col>
-                
+
                 <Col>
                   <Row style={{ height: "50px" }}></Row>
-                   <h3>
-                    Members
-                  </h3>
-                    <p>
-                      Check the "Find a Local Group" section to find a group in your county.
-                      If you do not see one listed, and wish to host a local group, please see the "Host a Local Group" section.
-                    </p>
-                <center><Button variant="light" onClick={handleClick}>See Members</Button></center>
+                  <center>
+                    <div style={{padding:"10px"}}>
+                      <h1>
+                        Members               
+                      </h1>
+                    </div>
+                  </center>
+                    <center>
+                    <container>
+                      <h4>Total Members :</h4>
+                    </container>
+                      <container className="row" style={{background:"white", width:"20%", marginTop:"10px", marginBottom: "10px", padding:"10px"}}>
+                        <CountMembers members={members} setMembers={setMembers} /> 
+                      </container>
+
+                      <h4>New members in the last 7 days :</h4>
+                      <container className="row" style={{background:"white", width:"20%", marginTop:"10px", marginBottom: "10px", padding:"10px"}}>
+                      <CountMemberWeek members={members} setMembers={setMembers} /> 
+                      </container>
+
+                      <h4>New members in the last 7 days :</h4>
+                      <container className="row" style={{background:"white", width:"20%", marginTop:"10px", marginBottom: "10px", padding:"10px"}}>
+                      <CountMemberMonth members={members} setMembers={setMembers} /> 
+                      </container>
+                    </center>
+
+                      <center><p>
+                        Here you can view the number of total members, number of new members in the last 7 days from the current date, and the number of new members within the past 30 days. To make changes to any of the information, please click the button below to visit the members admin dashboard. 
+                      </p></center>
+                  <center>
+                  <div style={{margin:"20px"}}>
+                    <Button variant="light" onClick={handleClick}>See Members</Button>
+                  </div>
+                  </center>
                 </Col>  
               </Row>
               <Row style={{ height: "50px" }}></Row>
         </Container> 
     </div>
-    <Row style={{ height: "30px" }}></Row>
+      <Row style={{ height: "30px" }}></Row>
   </div>
 
   );

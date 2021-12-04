@@ -48,8 +48,19 @@ app.get("/grouptotal",(req, res) => {
 
 
 //get total of groups in system and display as totalgroups: #
-app.get("/grouptotal",(req, res) => {
-  db.query("SELECT COUNT(*) AS totalgroups FROM teenytinyexplorer.groups;" , (err, result) => {
+app.get("/grouptotalWeek",(req, res) => {
+  db.query("SELECT COUNT(*) AS totalgroupsWeek FROM teenytinyexplorer.groups WHERE timestamp > now() - interval 7 day;" , (err, result) => {
+   if (err) {
+      console.log(err);
+   } else {
+    res.send(result);
+    }
+ });
+});
+
+//get total of groups in system and display as totalgroupsMonth: #
+app.get("/grouptotalMonth",(req, res) => {
+  db.query("SELECT COUNT(*) AS totalgroupsMonth FROM teenytinyexplorer.groups WHERE timestamp > now() - interval 30 day;" , (err, result) => {
    if (err) {
       console.log(err);
    } else {
@@ -120,6 +131,28 @@ app.get("/members", (req, res) => {
 //get total of members in system and display as totalmembers: #
 app.get("/membertotal",(req, res) => {
   db.query("SELECT COUNT(*) AS totalmembers FROM teenytinyexplorer.member;" , (err, result) => {
+   if (err) {
+      console.log(err);
+   } else {
+    res.send(result);
+    }
+ });
+});
+
+//get total of members in system and display as totalmembersWeek: #
+app.get("/membertotalWeek",(req, res) => {
+  db.query("SELECT COUNT(*) AS totalmembersWeek FROM teenytinyexplorer.member WHERE timestamp > now() - interval 7 day;" , (err, result) => {
+   if (err) {
+      console.log(err);
+   } else {
+    res.send(result);
+    }
+ });
+});
+
+//get total of members in system and display as totalmembersMonth: #
+app.get("/membertotalMonth",(req, res) => {
+  db.query("SELECT COUNT(*) AS totalmembersMonth FROM teenytinyexplorer.member WHERE timestamp > now() - interval 30 day;" , (err, result) => {
    if (err) {
       console.log(err);
    } else {

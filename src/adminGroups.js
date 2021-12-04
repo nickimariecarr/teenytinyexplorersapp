@@ -37,7 +37,6 @@ function AdminGroups() {
 
     return (
       <div className="Group">
-
         <div>
            <center> <button>Search</button>
             <SearchBar

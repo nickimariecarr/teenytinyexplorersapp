@@ -2,11 +2,11 @@ import "./App.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-export default function CountGroups(props) {
+export default function CountGroupWeek(props) {
     const [groups, setGroups] = useState([]);
 
   const getGroups = () => {
-    axios.get("http://localhost:3000/grouptotal").then((res) => {
+    axios.get("http://localhost:3000/grouptotalweek").then((res) => {
       setGroups(res.data);
     });
   };
@@ -16,14 +16,14 @@ export default function CountGroups(props) {
   }, [groups]);
 
   return (
-    <div className="CountMember">
-      <header className="CountMember-header">
+    <div className="CountGroup">
+      <header className="CountGroup-header">
       </header>
       <div className="groups">
         {groups.map((item) => {
           return (
             <div className="groups">
-              <h4>{item.totalgroups}</h4>
+              <p>{item.totalgroupsWeek}</p>
             </div>
           );
         })}
@@ -31,5 +31,7 @@ export default function CountGroups(props) {
     </div>
   );
 }
+
+
 
 
