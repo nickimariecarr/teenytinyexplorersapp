@@ -2,12 +2,21 @@ import React from 'react';
 import Explorers from './Explorers.PNG';
 import {Container, Row, Col, Button} from 'react-bootstrap'
 import ExplorerHome from './ExplorerHome.png';
+import { useNavigate } from 'react-router';
 
 
 console.log(Explorers);
 console.log(ExplorerHome);
 
 function Admindashboard() {
+  
+  let navigate = useNavigate();
+
+  function handleClick() {
+      navigate('/adminMembers')
+    }
+
+  
     return(
       <div>   
       <Row style={{ height: "30px" }}></Row>
@@ -59,7 +68,7 @@ function Admindashboard() {
                       Check the "Find a Local Group" section to find a group in your county.
                       If you do not see one listed, and wish to host a local group, please see the "Host a Local Group" section.
                     </p>
-                <center><Button variant="light">See Members</Button></center>
+                <center><Button variant="light" onClick={handleClick}>See Members</Button></center>
                 </Col>  
               </Row>
               <Row style={{ height: "50px" }}></Row>

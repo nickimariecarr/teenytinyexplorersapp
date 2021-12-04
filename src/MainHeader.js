@@ -57,16 +57,6 @@ const MainHeader = () => {
               Admin 
             </NavLink>
           </li>
-          <li>
-            <NavLink activeClassName={classes.active} to='./adminGroups'>
-              Admin Groups
-            </NavLink>
-          </li>
-          <li>
-            <NavLink activeClassName={classes.active} to='./adminMembers'>
-              Admin Members
-            </NavLink>
-          </li>
         </ul>
       </nav>
     </header>
