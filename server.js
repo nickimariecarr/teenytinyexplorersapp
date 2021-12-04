@@ -35,6 +35,17 @@ app.get("/group", (req, res) => {
    });
   });
 
+//get total of groups in system and display as totalgroups: #
+app.get("/grouptotal",(req, res) => {
+  db.query("SELECT COUNT(*) AS totalgroups FROM teenytinyexplorer.groups;" , (err, result) => {
+   if (err) {
+      console.log(err);
+   } else {
+    res.send(result);
+    }
+ });
+});
+
 //post groups
 app.post("/group", (req, res) => {
   const insertQuery = "INSERT INTO teenytinyexplorer.groups SET ?;"
@@ -81,7 +92,7 @@ app.delete("/group/:id", (req, res) => {
 
   
 //********************************MEMBERS TABLE********************************
-// get members
+// get all members
 app.get("/members", (req, res) => {
   db.query("SELECT * FROM teenytinyexplorer.member;" , (err, result) => {
     if (err) {
@@ -90,6 +101,19 @@ app.get("/members", (req, res) => {
       res.send(result);
     }
   });
+});
+
+
+
+//get total of members in system and display as totalmembers: #
+app.get("/membertotal",(req, res) => {
+  db.query("SELECT COUNT(*) AS totalmembers FROM teenytinyexplorer.member;" , (err, result) => {
+   if (err) {
+      console.log(err);
+   } else {
+    res.send(result);
+    }
+ });
 });
 
 //post members

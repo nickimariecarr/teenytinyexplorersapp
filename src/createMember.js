@@ -10,6 +10,7 @@ export default function CreateMember(props) {
     addMember(data);
   };
 
+  
   const addMember = (data) => {
       axios.post("http://localhost:3000/members", data).then(() => {
         // 4.

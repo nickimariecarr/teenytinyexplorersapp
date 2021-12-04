@@ -9,6 +9,7 @@ import axios from "axios";
 import SearchGroups from "./tableSearch";
 import Delete from "./deleteGroup.js";
 import SearchBar from './searchBar';
+import CountGroups from './countGroups';
 
 function AdminGroups() {
   const [groups, setGroups] = useState([]);

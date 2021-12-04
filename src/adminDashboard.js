@@ -3,17 +3,25 @@ import Explorers from './Explorers.PNG';
 import {Container, Row, Col, Button} from 'react-bootstrap'
 import ExplorerHome from './ExplorerHome.png';
 import { useNavigate } from 'react-router';
+import CountGroups from './countGroups';
+import { useState, useEffect } from "react";
+
 
 
 console.log(Explorers);
 console.log(ExplorerHome);
 
 function Admindashboard() {
-  
+  const [groups, setGroups] = useState([]);
+
   let navigate = useNavigate();
 
   function handleClick() {
       navigate('/adminMembers')
+    }
+
+    function handleClick2() {
+      navigate('/adminGroups')
     }
 
   
@@ -28,6 +36,7 @@ function Admindashboard() {
                 <center><h3>
                   Groups                
                 </h3></center>
+                <container className="row" style={{background:"green"}}><CountGroups groups={groups} setGroups={setGroups}  /> </container>
                   <p>
                     Getting out into nature can happen at anytime, but having a group to get out and explore together can be so much fun. 
                     Teeny Tiny Explorers is focused on creating communities to come together and explorer the outdoors with one another. 
@@ -37,7 +46,7 @@ function Admindashboard() {
                   </p>
               </Col>
             </Row>
-            <center><Button variant="light">See Groups</Button></center>
+            <center><Button variant="light" onClick={handleClick2} >See Groups</Button></center>
           <Row style={{ height: "20px" }}></Row>
     </Container>
     </div>
