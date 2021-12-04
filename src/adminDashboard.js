@@ -111,7 +111,7 @@ function Admindashboard() {
                       <CountMemberWeek members={members} setMembers={setMembers} /> 
                       </container>
 
-                      <h4>New members in the last 7 days :</h4>
+                      <h4>New members in the last 30 days :</h4>
                       <container className="row" style={{background:"white", width:"20%", marginTop:"10px", marginBottom: "10px", padding:"10px"}}>
                       <CountMemberMonth members={members} setMembers={setMembers} /> 
                       </container>
