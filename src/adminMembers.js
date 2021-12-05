@@ -26,20 +26,15 @@ function AdminMember() {
       <div className="Member">
 
         <div>
-          <label> Search for Member</label>
-            <input type="text" name="input" />
-            <button>Search</button>
         </div>
         <div>
-        <center> <CreateMember member={member} setMember={setMember} /> </center>
+        <center style={{marginTop:"10px"}}> <CreateMember member={member} setMember={setMember} /> </center>
           <center>
-          <table className="search-table" style={{alignItems:"center", border:"3px", width:"100%"}}>
+          <table class="searchable sortable"  style={{alignItems:"center", border:"3px", width:"100%"}}>
             <thead>
               <tr>
                 <th>First Name </th>
                 <th> Last Name </th>
-                <th> Username</th>
-                <th> Password </th>
                 <th> Email</th>
                 <th> Address</th>
                 <th> City</th>
@@ -57,8 +52,6 @@ function AdminMember() {
 
                       <td>{item.mbrfirstname}</td>
                       <td>{item.mbrlastname}</td>
-                      <td>{item.username}</td>
-                      <td>{item.password}</td>
                       <td>{item.email}</td>
                       <td>{item.address}</td>
                       <td>{item.city}</td>

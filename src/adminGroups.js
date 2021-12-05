@@ -5,7 +5,6 @@ import "./App.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Delete from "./deleteGroup.js";
-import SearchBar from './searchBar';
 import CreateGroups from './createGroups';
 
 function AdminGroups() {
@@ -34,16 +33,11 @@ function AdminGroups() {
     return (
       <div className="Group">
         <div>
-           <center> <button>Search</button>
-            <SearchBar
-            input={input}
-            onChange={updateInput}/>
-            </center>
         </div>
 
         
         <div>
-        <center> <CreateGroups groups={groups} setGroups={setGroups} /> </center>
+        <center style={{marginTop:"10px"}}> <CreateGroups groups={groups} setGroups={setGroups} /> </center>
 
         <center>
           <table className="search-table" style={{alignItems:"center", width:"100%", border:"3px"}}>

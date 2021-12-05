@@ -26,7 +26,7 @@ const db = mysql.createPool({
 
 //get groups
 app.get("/group", (req, res) => {
-    db.query("SELECT * FROM teenytinyexplorer.groups;" , (err, result) => {
+    db.query("SELECT * FROM teenytinyexplorer.groups ORDER BY state ASC;" , (err, result) => {
      if (err) {
         console.log(err);
      } else {
@@ -117,7 +117,7 @@ app.delete("/group/:id", (req, res) => {
 //********************************MEMBERS TABLE********************************
 // get all members
 app.get("/members", (req, res) => {
-  db.query("SELECT * FROM teenytinyexplorer.member;" , (err, result) => {
+  db.query("SELECT * FROM teenytinyexplorer.member ORDER BY mbrfirstname ASC;" , (err, result) => {
     if (err) {
       console.log(err);
     } else {
