@@ -2,7 +2,6 @@
 //contains login form for users that are already registered with an account 
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import {useNavigate} from 'react-router-dom';
 
 //design elements
 import Image from "react-bootstrap/Image";
@@ -13,7 +12,6 @@ import playing from './playing.png';
 
 
 export default function Loginform() {
-    let navigate = useNavigate;
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
 
