@@ -1,6 +1,10 @@
 const cors = require("cors");
 const express = require("express");
 const mysql = require("mysql");
+
+const bcrypt = require('bcrypt')
+const saltRounds = 10 
+
 require("dotenv").config();
 
 const app = express();
@@ -206,7 +210,7 @@ app.delete("/members/:id", (req, res) => {
 });
 
 
-
+//login
 app.post("/login", (req, res)=> {
   const username = req.body.username;
   const password = req.body.password;

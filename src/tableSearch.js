@@ -5,8 +5,9 @@ import React, { useState, useEffect } from 'react';
 
 export default function SearchGroups () {
     // 1.
-    const { handleSubmit } = useForm();
+    const { register, handleSubmit } = useForm();
     // 2.
+    const [input, setInput] = useState('');
 
     const onSubmit = (data) =>  {alert(JSON.stringify(data));
       console.log(data);
