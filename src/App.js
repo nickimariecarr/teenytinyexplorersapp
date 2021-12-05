@@ -72,7 +72,7 @@ function App() {
         <div className="color-nav" style={{display: "flex", alignItems:'center',height: "30px"}}>
               <Container >
                 <footer className="color-nav" >
-                    © Teeny Tiny Explorers 2021
+                  <center>  © Teeny Tiny Explorers 2021</center>
 
                 </footer>
               </Container>
