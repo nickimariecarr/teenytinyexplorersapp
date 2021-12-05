@@ -1,14 +1,12 @@
 import { useForm } from "react-hook-form";
 import axios from "axios";
-import SearchBar from './searchBar';
 import React, { useState, useEffect } from 'react';
 
 
 export default function SearchGroups () {
     // 1.
-    const { register, handleSubmit } = useForm();
+    const { handleSubmit } = useForm();
     // 2.
-    const [input, setInput] = useState('');
 
     const onSubmit = (data) =>  {alert(JSON.stringify(data));
       console.log(data);

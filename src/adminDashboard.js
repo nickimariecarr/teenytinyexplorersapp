@@ -17,7 +17,6 @@ console.log(ExplorerHome);
 function Admindashboard() {
   const [groups, setGroups] = useState([]);
   const [members, setMembers] = useState([]);
-  const [group, setGroup] = useState([]);
 
   let navigate = useNavigate();
 
@@ -61,7 +60,7 @@ function Admindashboard() {
                   
 
 
-                  <h4>New groups in the last 7 days :</h4>
+                  <h4>New groups in the last 30 days :</h4>
                   <container className="row" style={{background:"white", width:"20%", marginTop:"10px", marginBottom: "10px", padding:"10px"}}>
                     <CountGroupsMonth groups={groups} setGroups={setGroups} /> 
                   </container>

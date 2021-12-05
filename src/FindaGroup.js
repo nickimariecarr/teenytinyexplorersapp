@@ -1,18 +1,13 @@
 
 
 import React from 'react';
-import { MDBDataTable } from 'mdbreact';
-import {Container, Row, Col, Button} from 'react-bootstrap'
 import "./App.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import SearchGroups from "./tableSearch";
-import Delete from "./deleteGroup.js";
 import SearchBar from './searchBar';
 
 function FindaGroup() {
   const [groups, setGroups] = useState([]);
-  const BarStyling = {width:"20rem",background:"#F2F1F9", border:"none", padding:"0.5rem"};
   const [input, setInput] = useState('');
 
   const getGroups = () => {

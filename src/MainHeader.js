@@ -48,11 +48,6 @@ const MainHeader = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink activeClassName={classes.active} to='./memberTable'>
-              Members 
-            </NavLink>
-          </li>
-          <li>
             <NavLink activeClassName={classes.active} to='./adminDashboard'>
               Admin 
             </NavLink>

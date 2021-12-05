@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 //router for navigation
 import { Route, Routes } from 'react-router-dom';
 
@@ -25,7 +26,6 @@ import Thankyoutwo from './Thankyoutwo';
 import Contact from './contact';
   //non admin pages with tables with display data
 import FindaGroup from './FindaGroup';
-import FindMembers from './memberTable';
 
   // admin pages
 import Admindashboard from './adminDashboard';
@@ -34,7 +34,7 @@ import AdminMember from './adminMembers';
 
   //login and signup pages 
 import SignUp from './SignUp';
-import Login from './login';
+import Loginform from './login';
 
 
 
@@ -56,9 +56,8 @@ function App() {
                 <Route path='/BecomeaHost' element={<BecomeaHost />} />
                 <Route path='/FindaGroup' element={<FindaGroup />} />
                 <Route path='/contact' element={<Contact />} />
-                <Route path='/login' element={<Login />} />
+                <Route path='/login' element={<Loginform />} />
                 <Route path='/SignUp' element={<SignUp />} />
-                <Route path='/memberTable' element={<FindMembers />} />
                 <Route path='/adminDashboard' element={<Admindashboard />} />
                 <Route path='/adminGroups' element={<AdminGroups />} />
                 <Route path='/adminMembers' element={<AdminMember />} />

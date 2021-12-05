@@ -1,6 +1,6 @@
 import React from 'react';
 import "./App.css";
-import { useState, useEffect } from "react";
+import { useState} from "react";
 import axios from "axios";
 import AddUser from "./Add";
 
