@@ -2,6 +2,7 @@
 //contains login form for users that are already registered with an account 
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Redirect } from 'react-router';
 
 //design elements
 import Image from "react-bootstrap/Image";
@@ -21,14 +22,13 @@ export default function Loginform() {
         axios.post("http://localhost:3000/login", {
           username: username,
           password: password,
-          
         }).then((response) => {
 
             if (response.data.message){
                 setLoginStatus(response.data.message)
             }
             else {
-                setLoginStatus(response.data[0].username);
+              window.location = "./adminDashboard";
             }
         });
       };

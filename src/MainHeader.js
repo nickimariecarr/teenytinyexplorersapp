@@ -10,8 +10,8 @@ import classes from './MainHeader.module.css';
 const MainHeader = () => {
   return (
     <header className={classes.header}>
-      <nav>
-        <ul>
+      <center><nav>
+        <ul style={{width:"80%", marginTop:"20px"}}>
           <li>
             <NavLink activeClassName={classes.active} to='./home'>
               Home
@@ -24,12 +24,12 @@ const MainHeader = () => {
           </li>
           <li>
             <NavLink activeClassName={classes.active} to='./BecomeaHost'>
-              Become a Host
+              Become a Host     
             </NavLink>
           </li>
           <li>
             <NavLink activeClassName={classes.active} to='./contact'>
-              Contact
+            Contact
             </NavLink>
           </li>
           <li>
@@ -47,13 +47,8 @@ const MainHeader = () => {
               Sign Up 
             </NavLink>
           </li>
-          <li>
-            <NavLink activeClassName={classes.active} to='./adminDashboard'>
-              Admin 
-            </NavLink>
-          </li>
         </ul>
-      </nav>
+      </nav></center>
     </header>
   );
 };
