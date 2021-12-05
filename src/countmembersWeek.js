@@ -6,7 +6,7 @@ export default function CountMemberWeek(props) {
     const [members, setMembers] = useState([]);
 
   const getMembers = () => {
-    axios.get("http://localhost:3000/membertotalweek").then((res) => {
+    axios.get("https://teenytinyexplorers.herokuapp.com/membertotalweek").then((res) => {
       setMembers(res.data);
     });
   };

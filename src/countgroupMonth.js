@@ -6,7 +6,7 @@ export default function CountGroupsMonth(props) {
     const [groups, setGroups] = useState([]);
 
   const getGroups = () => {
-    axios.get("http://localhost:3000/grouptotalMonth").then((res) => {
+    axios.get("https://teenytinyexplorers.herokuapp.com/grouptotalMonth").then((res) => {
       setGroups(res.data);
     });
   };
