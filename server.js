@@ -30,7 +30,7 @@ const db = mysql.createPool({
 
   
 
-  const listener = app.listen(process.env.PORT || PORT, () => {
+  const listener = app.listen(process.env.PORT || 3000, () => {
     console.log('App is listening on port ' + listener.address().port)
 })
 
