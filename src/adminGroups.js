@@ -52,8 +52,10 @@ function AdminGroups() {
               </tr>
             </thead>
             <tbody>
+
                 {groups.map((item) => {
                   return (
+                    <div className="groups">
                     <tr>
                       <td>{item.county}</td>
                       <td>{item.contact}</td>
@@ -62,7 +64,7 @@ function AdminGroups() {
                     <td>
                       <Delete id={item.id} groups={groups} setGroups={setGroups} />
                     </td>
-                    </tr>
+                    </tr></div>
                   );
               })}
               
