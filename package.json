@@ -37,17 +37,18 @@
     "eject": "react-scripts eject"
   },
 
-
-  "engines": {
-    "node": "12.14.1"
-  },
-
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
     ]
   },
+
+  "engines": {
+    "node": "12.14.1"
+  },
+
+  
   "browserslist": {
     "production": [
       ">0.2%",
