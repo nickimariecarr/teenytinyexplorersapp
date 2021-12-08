@@ -12,7 +12,7 @@ export default function EditMember(props) {
   };
 
   const updateMember = (data) => {
-    axios.put("https://teenytinyexplorers.herokuapp.com/members", data).then((res) => {
+    axios.put("http://localhost:3000/members", data).then((res) => {
       props.setMember(
         props.member.map((item) => {
           return item.id === props.id

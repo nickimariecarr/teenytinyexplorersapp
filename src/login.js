@@ -19,7 +19,7 @@ export default function Loginform() {
     const [loginStatus, setLoginStatus] = useState("");
 
     const login = () => {
-        axios.post("https://teenytinyexplorers.herokuapp.com/login", {
+        axios.post("http://localhost:3000/login", {
           username: username,
           password: password,
         }).then((response) => {

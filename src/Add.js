@@ -12,7 +12,7 @@ export default function AddUser () {
   
     // function to make a POST req to the server to insert data to MySQL db
     const addMember = (data) => {
-      axios.post("https://teenytinyexplorers.herokuapp.com/members", data).then(() => {
+      axios.post("http://localhost:3000/members", data).then(() => {
         // 4.
         console.log(data);
 

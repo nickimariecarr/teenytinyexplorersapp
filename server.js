@@ -9,7 +9,6 @@ const app = express();
 app.use(express.json()); 
 app.use(cors());
 
-
 //create connection to database
 const db = mysql.createPool({
     host: process.env.DB_HOST, //localhost
@@ -20,10 +19,9 @@ const db = mysql.createPool({
 
   
 
-  const PORT = process.env.PORT || 3000;
-  app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}.`);
-  });
+  const listener = app.listen(process.env.PORT || PORT, () => {
+    console.log('App is listening on port ' + listener.address().PORT)
+})
 
 
 //********************************GROUPS TABLE*******************************************

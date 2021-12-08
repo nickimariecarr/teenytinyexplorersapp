@@ -6,7 +6,7 @@ export default function CountMembers(props) {
     const [members, setMembers] = useState([]);
 
   const getMembers = () => {
-    axios.get("https://teenytinyexplorers.herokuapp.com/membertotal").then((res) => {
+    axios.get("http://localhost:3000/membertotal").then((res) => {
       setMembers(res.data);
     });
   };
