@@ -10,10 +10,6 @@ app.use(express.json());
 app.use(cors());
 
 
-app.use(express.static("/"));
-
-
-
 //create connection to database
 const db = mysql.createPool({
     host: process.env.DB_HOST, //localhost
