@@ -2,7 +2,7 @@ import axios from "axios";
 export default function RemoveMember(props) {
   // 2.
   const deleteMembers = () => {
-    axios.delete(`http://localhost:3000/members/${props.id}`).then((res) => {
+    axios.delete(`https://teenytinyexplorers.herokuapp.com//${props.id}`).then((res) => {
       // 3.
       props.setMember(props.member.filter((item) => {
           return item.id !== props.id;

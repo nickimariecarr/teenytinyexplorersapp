@@ -12,7 +12,7 @@ export default function CreateMember(props) {
 
   
   const addMember = (data) => {
-      axios.post("http://localhost:3000/members", data).then(() => {
+      axios.post("https://teenytinyexplorers.herokuapp.com/members", data).then(() => {
         // 4.
         console.log(data);
 

@@ -6,7 +6,7 @@ export default function CountGroupWeek(props) {
     const [groups, setGroups] = useState([]);
 
   const getGroups = () => {
-    axios.get("http://localhost:3000/grouptotalweek").then((res) => {
+    axios.get("https://teenytinyexplorers.herokuapp.com/").then((res) => {
       setGroups(res.data);
     });
   };

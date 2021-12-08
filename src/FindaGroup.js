@@ -11,7 +11,7 @@ function FindaGroup() {
   const [input, setInput] = useState('');
 
   const getGroups = () => {
-    axios.get("http://localhost:3000/group").then((res) => {
+    axios.get("https://teenytinyexplorers.herokuapp.com/group").then((res) => {
       setGroups(res.data);
     });
   };
