@@ -13,15 +13,15 @@ import playing from './playing.png';
 
 
 export default function Loginform() {
-    const [username, setUsername] = useState("");
-    const [password, setPassword] = useState("");
+    const [hostusername, setUsername] = useState("");
+    const [hostpassword, setPassword] = useState("");
 
     const [loginStatus, setLoginStatus] = useState("");
 
     const login = () => {
-        axios.post("http://localhost:3000/login", {
-          username: username,
-          password: password,
+        axios.post("http://localhost:3000/hostlogin", {
+          hostusername: hostusername,
+          hostpassword: hostpassword,
         }).then((response) => {
 
             if (response.data.message){

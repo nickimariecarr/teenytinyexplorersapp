@@ -358,6 +358,31 @@ app.get("/hosts", (req, res) => {
   });
 });
 
+
+
+//login
+app.post("/hostlogin", (req, res)=> {
+  const hostusername = req.body.hostusername;
+  const hostpassword = req.body.hostpassword;
+
+  db.query(
+    "SELECT * FROM teenytinyexplorer.host WHERE hostusername = ? AND hostpassword = ?",
+    [hostusername,hostpassword],
+    (err, result) => {
+
+      if (err) {
+        res.send({ err: err });
+      }
+    if (result.length > 0) {
+        res.send(result);
+      } else {
+          res.send({ message: "Wrong username/password, please try again."});
+          }
+        }
+      );
+});
+
+
 //post hosts
 app.post("/hosts", (req, res) => {
   const insertQuery = "INSERT INTO teenytinyexplorer.host SET ?";

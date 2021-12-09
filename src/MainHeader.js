@@ -39,7 +39,7 @@ const MainHeader = () => {
           </li>
           <li>
             <NavLink activeClassName={classes.active} to='./login'>
-              Login
+              Admin
             </NavLink>
           </li>
           <li>
