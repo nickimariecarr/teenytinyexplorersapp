@@ -50,8 +50,8 @@ export default function Loginform() {
 
          <div className="App">  
           <div className="login">
-            <h1>Login</h1>
-            <label>Username</label>
+            <h1>Admin Login</h1>
+            <label>Admin Username</label>
 
            <div>
            <input
@@ -61,7 +61,7 @@ export default function Loginform() {
                 setUsername(e.target.value);
               }}
             /></div>
-            <label>Password</label>
+            <label>Admin Password</label>
             <div>
             <input
               type="password"
