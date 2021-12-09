@@ -2,7 +2,7 @@ import axios from "axios";
 export default function Delete(props) {
   // 2.
   const deleteGroup = () => {
-    axios.delete(`hhttps://teenytinyexplorers.herokuapp.com/group/${props.id}`).then((res) => {
+    axios.delete(`http://localhost:3000/group/${props.id}`).then((res) => {
       // 3.
       props.setGroups(props.groups.filter((item) => {
           return item.id !== props.id;

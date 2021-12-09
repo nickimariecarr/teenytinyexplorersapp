@@ -16,7 +16,7 @@ export default function SearchGroups () {
   
     // function to make a POST req to the server to insert data to MySQL db
     const searchaGroup = (data) => {
-      axios.post("https://teenytinyexplorers.herokuapp.com/group", data).then(() => {
+      axios.post("http://localhost:3000/group", data).then(() => {
         // 4.
         console.log(data);
 
