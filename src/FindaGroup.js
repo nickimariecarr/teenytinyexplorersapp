@@ -6,14 +6,14 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import SearchBar from './searchBar';
 
-axios.defaults.baseURL ="https://teenytinyexplorers.herokuapp.com"
+axios.defaults.baseURL ="http://teenytinyexplorers.herokuapp.com"
 
 function FindaGroup() {
   const [groups, setGroups] = useState([]);
   const [input, setInput] = useState('');
 
   const getGroups = () => {
-    axios.get("/group").then((res) => {
+    axios.get("/FindaGroup").then((res) => {
       setGroups(res.data);
     });
   };

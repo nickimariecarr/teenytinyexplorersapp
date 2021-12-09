@@ -30,7 +30,7 @@ app.listen(PORT, () => {
 //********************************GROUPS TABLE*******************************************
 
 //get groups
-app.get("/group", (req, res) => {
+app.get("/FindaGroup", (req, res) => {
     db.query("SELECT * FROM groups ORDER BY state ASC;" , (err, result) => {
      if (err) {
         console.log(err);
