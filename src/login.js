@@ -17,7 +17,7 @@ export default function Loginform() {
 
     const [loginStatus, setLoginStatus] = useState("");
 
-    const login = () => {
+    const memberlogin = () => {
         axios.post("http://localhost:3000/hostlogin", {
           hostusername: hostusername,
           hostpassword: hostpassword,
@@ -63,7 +63,7 @@ export default function Loginform() {
                 setPassword(e.target.value);
               }}
             /></div>
-            <button onClick={login}> Login </button>
+            <button onClick={memberlogin}> Login </button>
           </div>
           <h3>{loginStatus}</h3>
         </div>

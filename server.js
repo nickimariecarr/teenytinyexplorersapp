@@ -9,6 +9,7 @@ const app = express();
 app.use(express.json()); 
 app.use(cors());
 
+
 //create connection to database
 const db = mysql.createConnection({
     host: "us-cdbr-east-04.cleardb.com", 
@@ -18,6 +19,7 @@ const db = mysql.createConnection({
   });
 
   
+
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
@@ -133,7 +135,7 @@ app.get("/members", (req, res) => {
 
 //get total of members in system and display as totalmembers: #
 app.get("/membertotal",(req, res) => {
-  db.query("SELECT COUNT(*) AS totalmembers FROM teenytinyexplorer.member;" , (err, result) => {
+  db.query("SELECT COUNT(*) AS totalmembers FROM heroku_3525b48ff5e7cb8.member;" , (err, result) => {
    if (err) {
       console.log(err);
    } else {
@@ -144,7 +146,7 @@ app.get("/membertotal",(req, res) => {
 
 //get total of members in system and display as totalmembersWeek: #
 app.get("/membertotalWeek",(req, res) => {
-  db.query("SELECT COUNT(*) AS totalmembersWeek FROM teenytinyexplorer.member WHERE timestamp < now() - interval 7 day;" , (err, result) => {
+  db.query("SELECT COUNT(*) AS totalmembersWeek FROM heroku_3525b48ff5e7cb8.member WHERE timestamp < now() - interval 7 day;" , (err, result) => {
    if (err) {
       console.log(err);
    } else {
@@ -155,7 +157,7 @@ app.get("/membertotalWeek",(req, res) => {
 
 //get total of members in system and display as totalmembersMonth: #
 app.get("/membertotalMonth",(req, res) => {
-  db.query("SELECT COUNT(*) AS totalmembersMonth FROM teenytinyexplorer.member WHERE timestamp > now() - interval 30 day;" , (err, result) => {
+  db.query("SELECT COUNT(*) AS totalmembersMonth FROM heroku_3525b48ff5e7cb8.member WHERE timestamp > now() - interval 30 day;" , (err, result) => {
    if (err) {
       console.log(err);
    } else {
@@ -166,7 +168,7 @@ app.get("/membertotalMonth",(req, res) => {
 
 //post members
 app.post("/members", (req, res) => {
-  const insertQuery = "INSERT INTO teenytinyexplorer.member SET ?"
+  const insertQuery = "INSERT INTO heroku_3525b48ff5e7cb8.member SET ?"
   db.query(insertQuery, [req.body], (err, result) => {
     if (err) {
       console.log(err);
