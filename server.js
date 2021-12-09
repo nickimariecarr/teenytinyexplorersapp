@@ -29,7 +29,7 @@ app.listen(PORT, () => {
 
 //get groups
 app.get("/group", (req, res) => {
-    db.query("SELECT * FROM groups ORDER BY state ASC;" , (err, result) => {
+    db.query("SELECT * FROM heroku_3525b48ff5e7cb8.groups ORDER BY state ASC;" , (err, result) => {
      if (err) {
         console.log(err);
      } else {
@@ -40,7 +40,7 @@ app.get("/group", (req, res) => {
 
 //get total of groups in system and display as totalgroups: #
 app.get("/grouptotal",(req, res) => {
-  db.query("SELECT COUNT(*) AS totalgroups FROM teenytinyexplorer.groups;" , (err, result) => {
+  db.query("SELECT COUNT(*) AS totalgroups FROM heroku_3525b48ff5e7cb8.groups;" , (err, result) => {
    if (err) {
       console.log(err);
    } else {
@@ -52,7 +52,7 @@ app.get("/grouptotal",(req, res) => {
 
 //get total of groups in system and display as totalgroups: #
 app.get("/grouptotalWeek",(req, res) => {
-  db.query("SELECT COUNT(*) AS totalgroupsWeek FROM teenytinyexplorer.groups WHERE timestamp < now() - interval 7 day;" , (err, result) => {
+  db.query("SELECT COUNT(*) AS totalgroupsWeek FROM heroku_3525b48ff5e7cb8.groups WHERE timestamp < now() - interval 7 day;" , (err, result) => {
    if (err) {
       console.log(err);
    } else {
@@ -63,7 +63,7 @@ app.get("/grouptotalWeek",(req, res) => {
 
 //get total of groups in system and display as totalgroupsMonth: #
 app.get("/grouptotalMonth",(req, res) => {
-  db.query("SELECT COUNT(*) AS totalgroupsMonth FROM teenytinyexplorer.groups WHERE timestamp > now() - interval 30 day;" , (err, result) => {
+  db.query("SELECT COUNT(*) AS totalgroupsMonth FROM heroku_3525b48ff5e7cb8.groups WHERE timestamp > now() - interval 30 day;" , (err, result) => {
    if (err) {
       console.log(err);
    } else {
@@ -74,7 +74,7 @@ app.get("/grouptotalMonth",(req, res) => {
 
 //post groups
 app.post("/group", (req, res) => {
-  const insertQuery = "INSERT INTO teenytinyexplorer.groups SET ?;"
+  const insertQuery = "INSERT INTO heroku_3525b48ff5e7cb8.groups SET ?;"
   db.query(insertQuery, req.body, (err, result) => {
     if (err) {
       console.log(err);
@@ -87,7 +87,7 @@ app.post("/group", (req, res) => {
 //put groups 
 app.put("/group", (req, res) => {
   const updateQuery =
-    "UPDATE teenytinyexplorer.groups SET county = ?,  contact = ?, email = ?, state = ? WHERE id = ?";
+    "UPDATE heroku_3525b48ff5e7cb8.groups SET county = ?,  contact = ?, email = ?, state = ? WHERE id = ?";
   db.query(
     updateQuery,
     [req.body.county, req.body.contact, req.body.email, req.body.state, req.body.id],
@@ -104,7 +104,7 @@ app.put("/group", (req, res) => {
 //delete groups
 app.delete("/group/:id", (req, res) => {
   db.query(
-    "DELETE FROM teenytinyexplorer.groups WHERE id = ?",
+    "DELETE FROM heroku_3525b48ff5e7cb8.groups WHERE id = ?",
     req.params.id,
     (err, result) => {
       if (err) {
@@ -120,7 +120,7 @@ app.delete("/group/:id", (req, res) => {
 //********************************MEMBERS TABLE********************************
 // get all members
 app.get("/members", (req, res) => {
-  db.query("SELECT * FROM teenytinyexplorer.member ORDER BY mbrfirstname ASC;" , (err, result) => {
+  db.query("SELECT * FROM heroku_3525b48ff5e7cb8.member ORDER BY mbrfirstname ASC;" , (err, result) => {
     if (err) {
       console.log(err);
     } else {
@@ -179,7 +179,7 @@ app.post("/members", (req, res) => {
 //put members
 app.put("/members", (req, res) => {
   const updateQuery =
-    "UPDATE teenytinyexplorer.member SET mbrfirstname = ?,  mbrlastname = ?, email = ?, address = ?, city = ?, zip = ?, state = ?, username = ?, password = ?, WHERE id = ?";
+    "UPDATE heroku_3525b48ff5e7cb8.member SET mbrfirstname = ?,  mbrlastname = ?, email = ?, address = ?, city = ?, zip = ?, state = ?, username = ?, password = ?, WHERE id = ?";
   db.query(
     updateQuery,
     [req.body.mbrfirstname, req.body.mbrlastname, req.body.email, req.body.address, req.body.city, req.body.zip, req.body.state, req.body.username, req.body.password, req.body.id],
@@ -196,7 +196,7 @@ app.put("/members", (req, res) => {
 //delete members
 app.delete("/members/:id", (req, res) => {
   db.query(
-    "DELETE FROM teenytinyexplorer.member WHERE id = ?",
+    "DELETE FROM heroku_3525b48ff5e7cb8.member WHERE id = ?",
     req.params.id,
     (err, result) => {
       if (err) {
@@ -215,7 +215,7 @@ app.post("/login", (req, res)=> {
   const password = req.body.password;
 
   db.query(
-    "SELECT * FROM teenytinyexplorer.member WHERE username = ? AND password = ?",
+    "SELECT * FROM heroku_3525b48ff5e7cb8.member WHERE username = ? AND password = ?",
     [username,password],
     (err, result) => {
 
@@ -234,7 +234,7 @@ app.post("/login", (req, res)=> {
 //********************************COUNTY TABLE********************************
 // get counties
 app.get("/counties", (req, res) => {
-  db.query("SELECT * FROM teenytinyexplorer.county;" , (err, result) => {
+  db.query("SELECT * FROM heroku_3525b48ff5e7cb8.county;" , (err, result) => {
     if (err) {
       console.log(err);
     } else {
@@ -245,7 +245,7 @@ app.get("/counties", (req, res) => {
 
 //post counties
 app.post("/counties", (req, res) => {
-  const insertQuery = "INSERT INTO teenytinyexplorer.county SET ?";
+  const insertQuery = "INSERT INTO heroku_3525b48ff5e7cb8.county SET ?";
   db.query(insertQuery, req.body, (err, result) => {
     if (err) {
       console.log(err);
@@ -258,7 +258,7 @@ app.post("/counties", (req, res) => {
 //put counties
 app.put("/counties", (req, res) => {
   const updateQuery =
-    "UPDATE teenytinyexplorer.county SET countyname = ?, WHERE idcounty = ?";
+    "UPDATE heroku_3525b48ff5e7cb8.county SET countyname = ?, WHERE idcounty = ?";
   db.query(
     updateQuery,
     [req.body.countyname, req.body.idcounty],
@@ -275,7 +275,7 @@ app.put("/counties", (req, res) => {
 //delete counties
 app.delete("/counties/:id", (req, res) => {
   db.query(
-    "DELETE FROM teenytinyexplorer.county WHERE idcounty = ?",
+    "DELETE FROM heroku_3525b48ff5e7cb8.county WHERE idcounty = ?",
     req.params.id,
     (err, result) => {
       if (err) {
@@ -292,7 +292,7 @@ app.delete("/counties/:id", (req, res) => {
 //********************************STATE TABLE********************************
 // get states
 app.get("/states", (req, res) => {
-  db.query("SELECT * FROM teenytinyexplorer.State;" , (err, result) => {
+  db.query("SELECT * FROM heroku_3525b48ff5e7cb8.State;" , (err, result) => {
     if (err) {
       console.log(err);
     } else {
@@ -303,7 +303,7 @@ app.get("/states", (req, res) => {
 
 //post states
 app.post("/states", (req, res) => {
-  const insertQuery = "INSERT INTO teenytinyexplorer.State SET ?";
+  const insertQuery = "INSERT INTO heroku_3525b48ff5e7cb8.State SET ?";
   db.query(insertQuery, req.body, (err, result) => {
     if (err) {
       console.log(err);
@@ -316,7 +316,7 @@ app.post("/states", (req, res) => {
 //put states
 app.put("/states", (req, res) => {
   const updateQuery =
-    "UPDATE teenytinyexplorer.State State = ? WHERE idState = ?";
+    "UPDATE heroku_3525b48ff5e7cb8.State State = ? WHERE idState = ?";
   db.query(
     updateQuery,
     [req.body.State, req.body.idState],
@@ -333,7 +333,7 @@ app.put("/states", (req, res) => {
 //delete states
 app.delete("/states/:id", (req, res) => {
   db.query(
-    "DELETE FROM teenytinyexplorer.State WHERE idState = ?",
+    "DELETE FROM heroku_3525b48ff5e7cb8.State WHERE idState = ?",
     req.params.id,
     (err, result) => {
       if (err) {
@@ -350,7 +350,7 @@ app.delete("/states/:id", (req, res) => {
 //********************************HOSTS TABLE********************************
 // get hosts
 app.get("/hosts", (req, res) => {
-  db.query("SELECT * FROM teenytinyexplorer.host;" , (err, result) => {
+  db.query("SELECT * FROM heroku_3525b48ff5e7cb8.host;" , (err, result) => {
     if (err) {
       console.log(err);
     } else {
@@ -367,7 +367,7 @@ app.post("/hostlogin", (req, res)=> {
   const hostpassword = req.body.hostpassword;
 
   db.query(
-    "SELECT * FROM teenytinyexplorer.host WHERE hostusername = ? AND hostpassword = ?",
+    "SELECT * FROM heroku_3525b48ff5e7cb8.host WHERE hostusername = ? AND hostpassword = ?",
     [hostusername,hostpassword],
     (err, result) => {
 
@@ -386,7 +386,7 @@ app.post("/hostlogin", (req, res)=> {
 
 //post hosts
 app.post("/hosts", (req, res) => {
-  const insertQuery = "INSERT INTO teenytinyexplorer.host SET ?";
+  const insertQuery = "INSERT INTO heroku_3525b48ff5e7cb8.host SET ?";
   db.query(insertQuery, req.body, (err, result) => {
     if (err) {
       console.log(err);
@@ -400,7 +400,7 @@ app.post("/hosts", (req, res) => {
 //put hosts
 app.put("/hosts", (req, res) => {
   const updateQuery =
-    "UPDATE teenytinyexplorer.host SET hostfirstname= ?,  hostlastname = ?, hostemail = ?, hostaddress = ?, hostcity = ?, hostzip = ?, hoststate = ?, hostusername = ?, hostpassword = ?, WHERE idhost = ?";
+    "UPDATE heroku_3525b48ff5e7cb8.host SET hostfirstname= ?,  hostlastname = ?, hostemail = ?, hostaddress = ?, hostcity = ?, hostzip = ?, hoststate = ?, hostusername = ?, hostpassword = ?, WHERE idhost = ?";
   db.query(
     updateQuery,
     [req.body.hostfirstname, req.body.hostlastname, req.body.hostemail, req.body.hostaddress, req.body.hostcity, req.body.hostzip, req.body.hoststate, req.body.hostusername, req.body.hostpassword, req.body.idhost],
@@ -417,7 +417,7 @@ app.put("/hosts", (req, res) => {
 //delete hosts
 app.delete("/hosts/:id", (req, res) => {
   db.query(
-    "DELETE FROM teenytinyexplorer.host WHERE idhost = ?",
+    "DELETE FROM heroku_3525b48ff5e7cb8.host WHERE idhost = ?",
     req.params.id,
     (err, result) => {
       if (err) {
