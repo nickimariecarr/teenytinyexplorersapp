@@ -10,25 +10,26 @@ app.use(express.json());
 app.use(cors());
 
 //create connection to database
-const db = mysql.createPool({
-    host: process.env.DB_HOST, //localhost
-    user: process.env.DB_USER, //root
-    password: process.env.DB_PASSWORD, //Shivers05!
-    database: process.env.DB, //teenytinyexplorer
+const db = mysql.createConnection({
+    host: "us-cdbr-east-04.cleardb.com", 
+    user: "bf0ed817685c4c", 
+    password: "d32f92d0", 
+    database: "heroku_3525b48ff5e7cb8",
   });
 
   
 
-  const listener = app.listen(process.env.PORT || 3000, () => {
-    console.log('App is listening on port ' + listener.address().port)
-})
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+     console.log(`Server is running on port ${PORT}.`);
+  });
 
 
 //********************************GROUPS TABLE*******************************************
 
 //get groups
 app.get("/group", (req, res) => {
-    db.query("SELECT * FROM teenytinyexplorer.groups ORDER BY state ASC;" , (err, result) => {
+    db.query("SELECT * FROM groups ORDER BY state ASC;" , (err, result) => {
      if (err) {
         console.log(err);
      } else {
