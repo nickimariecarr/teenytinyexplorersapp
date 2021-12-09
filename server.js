@@ -376,7 +376,7 @@ app.post("/hostlogin", (req, res)=> {
       if (err) {
         res.send({ err: err });
       }
-    if (result.length > 0) {
+      if (result.length > 0) {
         res.send(result);
       } else {
           res.send({ message: "Wrong username/password, please try again."});
