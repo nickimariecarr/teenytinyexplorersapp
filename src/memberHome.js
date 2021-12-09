@@ -13,7 +13,7 @@ import Card from 'react-bootstrap/Card';
 //images
 import tree from './tree.png';
 
-function memberHome() {
+function MembersHome() {
     return(
     <div>
                
@@ -23,12 +23,12 @@ function memberHome() {
               <Container fluid>
                 <Row style={{ height: "50px" }}></Row>
                   <Row >
-                    <center><h3>Teeny Tiny Explorers</h3></center>
+                    <center><h3>Teeny Tiny Explorers Member Home</h3></center>
                     <p></p>
                     <p>
-                      Teeny Tiny Explorers was created with parents and children in mind. Today it can be so easy to fall into the trap of technology being a child's primary experiences. 
-                      The days of exploring the outdoors and learning about nature hands on, seem to continue to fade faster than we would every wish. Teeny Tiny Explorers was created with parents in mind. Parents that want to find new and exciting ways to connect with their child and get outside. Teeny Tiny Explorers is not a group that meets only in the summer, and perfect weather. 
-                      This group is focused on trying our best in any season.
+                      Hello! 
+
+                      This is the members only bulletin and announcement page. If there are important updates that need to be disbursed to the Teeny Tiny Explorers community, you can find them here. If you have any questions, please reach out to the host in your area. If you need their email please refer to the "Find a Group" page to locate their email address. 
                     </p>
                   </Row>
               </Container>
@@ -36,13 +36,11 @@ function memberHome() {
                 <Row className="color-nav" style={{ alignItems:'center', height: "200px" , padding: "5px"}}>
                   <center>
                     <h3>
-                      Why Teeny Tiny Explorers helps 
+                      Reminders:
                     </h3>
                   <p></p>
                     <p>
-                      Teeny Tiny Explorers helps adults and children get outside more and connect with the world around them. 
-                      As children continue to grow and get more comfortable with mobile devices, social media, and even sports. 
-                      Technology continues to be present in our lives.
+                      Due to covid we are refraining from having indoor gatherings with large groups for meetings. Any events will be outdoor events. If your group has a meeting you would like to conduct, please do so outdoors or via zoom. Information on meetings comes from your local host, and is disbursed via email. Please keep an eye out for any further needed details. 
                     </p>
                   </center>
                 </Row>
@@ -53,57 +51,25 @@ function memberHome() {
       <Container fluid>
           {/* goals section */} 
           <Row style={{ alignItems:'center'}}>
-          <Col style={{ width: "40%" , height:"40%"}}>
             <h3>
-              What are the goals of Teeny Tiny Explorers?
+             Announcements
             </h3>
             <Row ></Row>
             <div style={{alignItems:'center'}}>
               <Card className="color-nav"  border="dark" >
                 <Card.Body>
                   <Card.Title>
-                    Goal One
+                    No current annoucements...
                   </Card.Title>
                   <Card.Text>
-                    Help parents and caregivers build a relationship with their children and nature 
+                    please check back later
                   </Card.Text>
                 </Card.Body>
               </Card>
               <br />   
             </div>
 
-            <Row style={{ height: "5px" }}></Row>
 
-            <div style={{alignItems:'center'}}>
-              <Card className="color-nav"  border="dark" >
-                <Card.Body>
-                  <Card.Title>Goal Two</Card.Title>
-                  <Card.Text>
-                    Help children eliminate screen time. 
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-                <br />   
-            </div>
-
-
-            <Row style={{ height: "5px" }}></Row>
-            <div style={{alignItems:'center'}}>
-              <Card className="color-nav"  border="dark" >
-                <Card.Body>
-                  <Card.Title>Goal Three</Card.Title>
-                  <Card.Text>
-                    Help children build more relationships with like minded individuals. 
-                  </Card.Text>
-                </Card.Body>
-                </Card>
-                
-                <br />   
-            </div>
-          </Col>
-          <Col >
-            <Image src={tree} style={{ width: "100%" }}></Image>
-          </Col>
           </Row>
           <Row style={{ height: "50px" }}></Row>
         </Container> 
@@ -112,4 +78,4 @@ function memberHome() {
   </div>
   );
 }
-export default memberHome;
+export default MembersHome;

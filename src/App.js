@@ -24,7 +24,6 @@ import About from './about';
 import BecomeaHost from './BecomeaHost';
 import Thankyoutwo from './Thankyoutwo';
 import Contact from './contact';
-import memberHome from './memberHome';
 
   //non admin pages with tables with display data
 import FindaGroup from './FindaGroup';
@@ -39,6 +38,9 @@ import SignUp from './SignUp';
 import Loginform from './login';
 
 //member landing page for announcements
+import MembersHome from './memberHome'
+import MemberLoginform from './memberLogin'
+
 
 
 function App() {
@@ -65,7 +67,9 @@ function App() {
                 <Route path='/adminGroups' element={<AdminGroups />} />
                 <Route path='/adminMembers' element={<AdminMember />} />
                 <Route path='/Thankyoutwo' element={<Thankyoutwo />} />
-                <Route path='/memberHome' element={<memberHome/>} />
+                <Route path= '/memberHome' element={<MembersHome />} />
+                <Route patth= '/memberlogin' element={<MemberLoginform />} />
+ 
 
 
 
