@@ -68,7 +68,7 @@ function App() {
                 <Route path='/adminMembers' element={<AdminMember />} />
                 <Route path='/Thankyoutwo' element={<Thankyoutwo />} />
                 <Route path= '/memberHome' element={<MembersHome />} />
-                <Route patth= '/memberlogin' element={<MemberLoginform />} />
+                <Route path= '/memberLogin' element={<MemberLoginform />} />
  
 
 
@@ -79,7 +79,7 @@ function App() {
             </main>
         </div>
 
-        <div className="color-nav" style={{display: "flex", alignItems:'center',height: "30px"}}>
+        <div className="color-nav" style={{display: "flex", alignItems:'center',height: "40px"}}>
               <Container >
                 <footer className="color-nav" >
                   <center>  © Teeny Tiny Explorers 2021</center>

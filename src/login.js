@@ -9,7 +9,6 @@ import Image from "react-bootstrap/Image";
 import {Container, Row, Col, Button} from 'react-bootstrap'
 
 //images
-import playing from './playing.png';
 
 
 export default function Loginform() {
@@ -38,18 +37,12 @@ export default function Loginform() {
       {/* Image of child playing on left hand side */} 
       <div >
         <Container fluid>
-            <Row style={{ height: "50px" }}></Row>
-            <Row className="light-row" style={{ alignItems:'center', padding: "5px"}}>
-                <Col>
-            <div style={{ display: "flex" , alignItems:'center'}}>
-                <Image src={playing} fluid/>
-                    </div>
-                </Col>
+            <Row className="light-row" style={{ alignItems:'center', padding: "5px", height:""}}>
             <Col>
             
 
          <div className="App">  
-          <div className="login">
+          <div className="login" style={{paddingBottom:"50px", paddingTop:"50px"}}>
             <h1>Admin Login</h1>
             <label>Admin Username</label>
 
@@ -74,6 +67,9 @@ export default function Loginform() {
           </div>
           <h3>{loginStatus}</h3>
         </div>
+              </Col>
+              <Col>
+                If you are a host and do not have your login credentials yet, please contact teenytinyexplorers@gmail.com
               </Col>
             </Row>
     </Container>

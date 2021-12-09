@@ -13,22 +13,22 @@ import playing from './playing.png';
 
 
 export default function MemberLoginform() {
-    const [hostusername, setUsername] = useState("");
-    const [hostpassword, setPassword] = useState("");
+    const [username, setUsername] = useState("");
+    const [password, setPassword] = useState("");
 
     const [loginStatus, setLoginStatus] = useState("");
 
     const login = () => {
-        axios.post("http://localhost:3000/hostlogin", {
-          hostusername: hostusername,
-          hostpassword: hostpassword,
+        axios.post("http://localhost:3000/login", {
+          username: username,
+          password: password,
         }).then((response) => {
 
             if (response.data.message){
                 setLoginStatus(response.data.message)
             }
             else {
-              window.location = "./adminDashboard";
+              window.location = "./memberHome";
             }
         });
       };
@@ -37,8 +37,7 @@ export default function MemberLoginform() {
       <div>    
       {/* Image of child playing on left hand side */} 
       <div >
-        <Container fluid>
-            <Row style={{ height: "50px" }}></Row>
+        <Container >
             <Row className="light-row" style={{ alignItems:'center', padding: "5px"}}>
                 <Col>
             <div style={{ display: "flex" , alignItems:'center'}}>
@@ -49,9 +48,9 @@ export default function MemberLoginform() {
             
 
          <div className="App">  
-          <div className="login">
-            <h1>Admin Login</h1>
-            <label>Admin Username</label>
+          <div className="login" style={{paddingBottom:"50px", paddingTop:"50px"}}>
+            <h1>Member Login</h1>
+            <label>Username</label>
 
            <div>
            <input
@@ -61,7 +60,7 @@ export default function MemberLoginform() {
                 setUsername(e.target.value);
               }}
             /></div>
-            <label>Admin Password</label>
+            <label>Password</label>
             <div>
             <input
               type="password"
@@ -76,6 +75,7 @@ export default function MemberLoginform() {
         </div>
               </Col>
             </Row>
+
     </Container>
     </div>
     <div >

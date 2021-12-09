@@ -87,11 +87,11 @@ function Home() {
                     </p>
                     <div style={{alignItems:'center'}}>
                     <Link to="/FindaGroup">
-                      <Button className="color-nav" >Find a Group</Button> 
+                      <Button className="color-nav" style={{margin:"5px", background:"#6D7A69"}}>Find a Group</Button> 
                     </Link>
 
                     <Link to="/BecomeaHost">
-                      <Button >Become a Host</Button> 
+                      <Button style={{margin:"5px", background:"#6D7A69"}} >Become a Host</Button> 
                     </Link>
 
                     </div>

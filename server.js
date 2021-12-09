@@ -224,7 +224,7 @@ app.post("/login", (req, res)=> {
     if (result.length > 0) {
         res.send(result);
       } else {
-          res.send({ message: "Wrong username/password, please try again."});
+          res.send({ message: "Wrong username/password, please try again. If you need help please email teenytinyexplorers@gmail.com."});
           }
         }
       );
