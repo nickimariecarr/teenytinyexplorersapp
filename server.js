@@ -31,7 +31,7 @@ app.listen(PORT, () => {
 
 //get groups
 app.get("/group", (req, res) => {
-    db.query("SELECT * FROM heroku_3525b48ff5e7cb8.groups ORDER BY state ASC;" , (err, result) => {
+    db.query("SELECT * FROM groups ORDER BY state ASC;" , (err, result) => {
      if (err) {
         console.log(err);
      } else {
