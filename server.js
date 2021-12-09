@@ -3,6 +3,7 @@ const mysql = require("mysql");
 require("dotenv").config();
 const cors = require("cors");
 const path = require("path");
+const proxy = require('http-proxy-middleware')
 
 
 const app = express();
@@ -27,10 +28,15 @@ app.listen(PORT, () => {
   });
 
 
+  module.exports = function(app) {
+    // add other server routes to path array
+    app.use(proxy(['/api' ], { target: 'http://localhost:3000' }));
+} 
+
 //********************************GROUPS TABLE*******************************************
 
 //get groups
-app.get("/FindaGroup", (req, res) => {
+app.get("/group", (req, res) => {
     db.query("SELECT * FROM groups ORDER BY state ASC;" , (err, result) => {
      if (err) {
         console.log(err);
