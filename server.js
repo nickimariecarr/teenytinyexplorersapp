@@ -30,7 +30,7 @@ app.listen(PORT, () => {
 
   module.exports = function(app) {
     // add other server routes to path array
-    app.use(proxy(['/group' ], { target: 'http://localhost:3000' }));
+    app.use(proxy(['/group' ], { target: 'http://localhost:5000' }));
 } 
 
 //********************************GROUPS TABLE*******************************************
