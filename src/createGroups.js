@@ -12,7 +12,7 @@ export default function CreateGroups(props) {
 
   
   const addGroups = (data) => {
-      axios.post("http://localhost:3000/group", data).then(() => {
+      axios.post("https://teenytinyexplorers.herokuapp.com/group", data).then(() => {
         // 4.
         console.log(data);
 
