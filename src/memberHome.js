@@ -1,7 +1,4 @@
-// about.js in src folder ./about 
-//contains information about teeny tiny explorers and the mission of the application for first time users to read 
-
-
+//memberHome.js this is the landing page for members once they login through member login page 
 import React from 'react';
 
 

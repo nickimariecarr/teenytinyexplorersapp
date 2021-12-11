@@ -1,3 +1,6 @@
+// server page to launch application server and connect the database to Heroku hosted ClearDB server.js
+
+
 const express = require("express");
 const mysql = require("mysql");
 require("dotenv").config();

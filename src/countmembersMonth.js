@@ -1,3 +1,6 @@
+//countmemberMonth.js provides the total count of new members in the past 30 days this is displayed on the adminDashboard page
+
+
 import "./App.css";
 import { useState, useEffect } from "react";
 import axios from "axios";

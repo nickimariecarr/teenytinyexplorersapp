@@ -1,4 +1,4 @@
-
+// adminGroups page that is accessible through the adminDashboard page. Users can create new groups and delete groups
 
 import React from 'react';
 import "./App.css";

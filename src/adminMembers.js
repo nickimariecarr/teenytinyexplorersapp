@@ -1,3 +1,4 @@
+// adminMembers page that is accessible through the adminDashboard page. Users can create new members and delete members
 
 
 import React from 'react';

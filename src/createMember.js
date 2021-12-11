@@ -1,3 +1,6 @@
+//createMember.js provides the user in the admin dashboard area the ability to create new members in the database
+
+
 import "./App.css";
 import React from "react";
 import { useForm } from "react-hook-form";

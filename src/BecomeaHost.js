@@ -1,9 +1,15 @@
+//BecomeaHost.js is the BecomeaHost page where users that are wanting to become a host can submit a form 
+// The form is submitted through EmailJS
+
+
+
 import React from "react";
 import "./App.css";
 import emailjs from 'emailjs-com';
 import { Form, Input, TextArea, Button } from "semantic-ui-react";
 import Swal from "sweetalert2";
 
+//login and connection information for EmailJS 
 const SERVICE_ID = "teenytinyexplorers";
 const TEMPLATE_ID = "template_kxw5tph";
 const USER_ID = "user_a5jwzuX6kSAOK7KdHVqVM";

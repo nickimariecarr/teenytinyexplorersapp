@@ -1,10 +1,11 @@
+// add page to add members to the database Add.js 
 import { useForm } from "react-hook-form";
 import axios from "axios";
 
 export default function AddUser () {
-    // 1.
+  
     const { register, handleSubmit } = useForm();
-    // 2.
+  
     const onSubmit = (data) =>  {alert(JSON.stringify(data));
       console.log(data);
       addMember(data);

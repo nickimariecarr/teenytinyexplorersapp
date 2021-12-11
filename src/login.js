@@ -1,5 +1,5 @@
-// login.js in src folder ./login
-//contains login form for users that are already registered with an account 
+// login.js is the Admin Login page that allows users that are hosts to access the admin dashboard area where new members and groups can be added. 
+
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Redirect } from 'react-router';

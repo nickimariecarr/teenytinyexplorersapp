@@ -1,3 +1,5 @@
+//deleteMembers.js provides the user in the admin dashboard area the ability to delete members in the database
+
 import axios from "axios";
 export default function RemoveMember(props) {
   // 2.

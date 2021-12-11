@@ -1,3 +1,6 @@
+//deleteGroups.js provides the user in the admin dashboard area the ability to delete groups in the database
+
+
 import axios from "axios";
 export default function Delete(props) {
   // 2.

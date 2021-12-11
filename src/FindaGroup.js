@@ -1,4 +1,5 @@
 
+//FindaGroup.js is the Find a Group page and allows users to look for groups in their state
 
 import React from 'react';
 import "./App.css";

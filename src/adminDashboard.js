@@ -1,3 +1,8 @@
+// adminDashboard that shows the number of total members, new members in the last 30 days, and new members in the last 7 days
+// adminDashboard that shows the number of total groups, new groups in the last 30 days, and the new groups in the last 7 days
+// adminDashboard.js 
+
+
 import React from 'react';
 import Explorers from './Explorers.PNG';
 import {Container, Row, Col, Button} from 'react-bootstrap'

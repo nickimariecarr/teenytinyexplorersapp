@@ -1,5 +1,5 @@
-// login.js in src folder ./login
-//contains login form for users that are already registered with an account 
+// login.js is the login page for members if members do not have a login they need to signup 
+
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Redirect } from 'react-router';

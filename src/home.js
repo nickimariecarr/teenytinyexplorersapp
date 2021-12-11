@@ -1,8 +1,4 @@
-// home.js in src folder ./home
-//contains home page elements such as information about the application and navigational buttons for users to find other pages to become a host or to read more 
-
-
-
+// home.js is the Home page and is the primary landing page 
 
 import React from 'react';
 

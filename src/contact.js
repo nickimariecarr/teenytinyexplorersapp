@@ -1,9 +1,12 @@
+// contact.js is the contact form for users that want to submit a question or concern 
+
 import React from "react";
 import "./App.css";
 import emailjs from 'emailjs-com';
 import { Form, Input, TextArea, Button } from "semantic-ui-react";
 import Swal from "sweetalert2";
 
+//Information needed to make connection to EmailJS
 const SERVICE_ID = "teenytinyexplorers";
 const TEMPLATE_ID = "testcontact";
 const USER_ID = "user_a5jwzuX6kSAOK7KdHVqVM";

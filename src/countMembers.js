@@ -1,3 +1,6 @@
+//countMembers.js provides the total count of members this is displayed on the adminDashboard page
+
+
 import "./App.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
