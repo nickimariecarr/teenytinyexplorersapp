@@ -2,69 +2,19 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# View the Deployed Project on Heroku 
+This project was deployed on Heroku and can be viewed at http://teenytinyexplorers.herokuapp.com/
 
-In the project directory, you can run:
+# The database is deployed through Heroku add on ClearDB
+The database was built on MySQL Workbench and then deployed to ClearDB 
 
-### `npm start`
+# The project Teeny Tiny Explorers 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Teeny Tiny Explorers was create to serve as a tool for parents and care givers to have a location to find local nature based playgroups. Teeny Tiny Explorers includes a page "Find a Group" in which the user can find a group in their county. If there is a group in their county, they can then see the email address to the host to contact them. If there is not a group in the users county, they can submit a form to be a host on the "Become a Host" page. 
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Hosts will be provided a login for the Admin Login page. Once host users are logged into the admin dashboard they can see the number of new groups in the past 7 days, and 30 days. They can also view the number of total groups. Hosts are also able to see the number of new members in the last 7 days, and the last 30 days. The number of total member are also view from the admin dashboard. 
 
-### `npm test`
+Hosts can add and delete members and groups in the admin dashboard areas. Users that are not hosts can also create logins by going to the sign up page. The information input into the sign up page is added to the member table in the database. The member can then go to the login page and utilize their login credentials. The members will login and see a member landing page. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+There is additional functionality such as submitting contact forms. Users can submit a general concern or question on the contact page. The contact form in the project was connected to EmailJS. The form information will be sent to the email configured in the EmailJS account. The same process occurs on the page in which a user can submit to become a host. 
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
